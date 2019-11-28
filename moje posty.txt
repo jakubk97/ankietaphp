@@ -1,0 +1,18 @@
+zad1.
+{"opcja": 1,"id":"mojplik.txt","napis1":"jakis","napis2":"jakis2"}
+zad2.
+{"opcja": 2,"id":"mojplik2.txt","liczba":5}
+zad3.
+{"opcja": 3,"id":"mojplik3.txt","wybrana_nazwa":"nazwabyrana z listy"}
+zad4.
+{"opcja": 4,"id":"mojplik4.txt","podpowiedz":"pod"}
+zad5.
+{"opcja": 5,"id":"mojplik5.txt","wzor_nr":1}
+zad6.
+{"opcja": 6,"id":"mojplik6.txt","R":1,"G":1,"B":1}
+zad7.
+{"opcja": 7,"id":"mojplik7.txt","data":"2019-30-10"}
+zad8.
+{"opcja": 8,"id":"mojplik8.txt","godzina":"12:15"}
+zad9.
+{"opcja": 9,"id":"mojplik9.txt","od":"12:15","do":"12:25"}
