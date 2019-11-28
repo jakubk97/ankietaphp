@@ -1,0 +1,4 @@
+{
+    "liczba": 5,
+    "wybrana_nazwa": "nazwabyrana z listy"
+}

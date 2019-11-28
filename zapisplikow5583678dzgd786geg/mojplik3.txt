@@ -1,0 +1,3 @@
+{
+    "wybrana_nazwa": "nazwabyrana z listy"
+}

@@ -1,0 +1,4 @@
+{
+    "tekst1": "jakis",
+    "tekst2": "jakis2"
+}
