@@ -243,6 +243,8 @@
         xhr.open("POST", "praca.php");
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.send(jsonString);
+        localStorage.removeItem("ID");
+        location.reload();
     }
 
     function zakonczWybor() {
@@ -329,10 +331,13 @@
                     myObj = JSON.parse(req.responseText);
                 if (myObj.dane == "a^2+b^2=c^2") {
                     document.getElementById("jeden").checked = true;
+                    this.wzor = "a^2+b^2=c^2";
                 } else if (myObj.dane == "lim x^2=1") {
                     document.getElementById("dwa").checked = true;
+                    this.wzor = "lim x^2=1";
                 } else if (myObj.dane == "e^2=7") {
                     document.getElementById("trzy").checked = true;
+                    this.wzor = "e^2=7";
                 } else
                     console.log("Błąd podczas ładowania strony\n");
             }
@@ -352,9 +357,10 @@
             if (req.readyState == 4) {
                 if (req.status == 200) {
                     myObj = JSON.parse(req.responseText);
-                    if (myObj.dane !== undefined)
+                    if (myObj.dane !== undefined) {
                         document.getElementById("myInput").value = myObj.dane;
-                    else
+                        this.wybor = myObj.dane;
+                    } else
                         document.getElementById("myInput").value = "";
                 }
             } else
@@ -378,6 +384,7 @@
                 if (req.status == 200) {
                     myObj = JSON.parse(req.responseText);
                     document.getElementById("kolor").value = myObj.dane;
+                    this.kolor = myObj.dane;
                 }
             } else
                 console.log("Błąd podczas ładowania strony\n");
@@ -398,6 +405,7 @@
                 if (req.status == 200) {
                     myObj = JSON.parse(req.responseText);
                     document.getElementById("data").value = myObj.dane;
+                    this.data = myObj.dane;
                 }
             } else
                 console.log("Błąd podczas ładowania strony\n");
