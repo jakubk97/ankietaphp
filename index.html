@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="utf-8">
+</head>
+
+
+<script>
+    function setlocalStorage() {
+        if (document.getElementById('id').value != '') {
+            localStorage.setItem('ID', document.getElementById('id').value);
+            window.location.href = "page1.html?id=" + document.getElementById('id').value;
+        }
+    }
+
+    function checklocalstorage() {
+        if (localStorage.getItem("ID")) {
+            window.location.href = "page1.html";
+        }
+    }
+
+    function generate() {
+        document.getElementById("id").value = (Math.random().toString(36).substr(2, 9)).toString();
+        document.getElementById('start_button').disabled = false;
+    }
+
+    function stoppedTyping() {
+        if (document.getElementById("id").value.length > 0) {
+            document.getElementById('start_button').disabled = false;
+        } else {
+            document.getElementById('start_button').disabled = true;
+        }
+    }
+</script>
+
+
+
+<div class="content">
+
+    <body onload="checklocalstorage()">
+        <header>
+            <h2>ANKIETA PHP</h2>
+        </header>
+        <main>
+            PODAJ ID: <input type="text" id="id" name="id" required onkeyup="stoppedTyping()"><br>
+            <input type="button" value="Dalej" onclick="setlocalStorage()" id="start_button" disabled></input>
+            <input type="button" value="Wygeneruj ID" onclick="generate()"></input>
+
+        </main>
+        <footer>
+        </footer>
+
+    </body>
+</div>
+
+</html>

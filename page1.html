@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="utf-8">
+</head>
+
+<div class="content">
+
+    <body onload="loadData()">
+        <header>
+            <h2>ANKIETA PHP</h2>
+        </header>
+        <main>
+
+            <!-- Tab links -->
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'Wzor')">Wzór</button>
+                <button class="tablinks" onclick="openTab(event, 'Wybor')">Wybór</button>
+                <button class="tablinks" onclick="openTab(event, 'KolorData')">Kolor i Data</button>
+            </div>
+
+            <!-- Tab content -->
+            <div id="Wzor" class="tabcontent">
+                <h3>Wzór</h3>
+                <form>
+                    <input type="radio" name="wzor" id="jeden" value="jeden" onchange="zapisz(this)"> a^2+b^2=c^2 <br>
+                    <!-- <div class="MathJax_Display" style="text-align: center;"><span class="MathJax" id="MathJax-Element-6-Frame" tabindex="0" style="text-align: center;"><nobr><span class="math" id="MathJax-Span-193" style="width: 11.662em; display: inline-block;"><span style="display: inline-block; position: relative; width: 11.181em; height: 0px; font-size: 104%;"><span style="position: absolute; clip: rect(1.806em, 1011.18em, 4.57em, -999.997em); top: -3.422em; left: 0em;"><span class="mrow" id="MathJax-Span-194"><span class="mi" id="MathJax-Span-195" style="font-family: MathJax_Math-italic;">P<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.123em;"></span></span>
+                    <span class="mo" id="MathJax-Span-196" style="font-family: MathJax_Main;">(</span><span class="mi" id="MathJax-Span-197" style="font-family: MathJax_Math-italic;">E<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span>
+                    <span class="mo" id="MathJax-Span-198" style="font-family: MathJax_Main;">)</span>
+                    <span class="mo" id="MathJax-Span-199" style="font-family: MathJax_Main; padding-left: 0.303em;">=</span><span class="texatom" id="MathJax-Span-200" style="padding-left: 0.303em;"><span class="mrow" id="MathJax-Span-201"><span class="mrow" id="MathJax-Span-202"><span class="TeXmathchoice" id="MathJax-Span-203"><span class="mstyle" id="MathJax-Span-204"><span class="mrow" id="MathJax-Span-205"><span class="texatom" id="MathJax-Span-206"><span class="mrow" id="MathJax-Span-207"><span class="mo" id="MathJax-Span-208" style="vertical-align: 0em;"><span style="font-family: MathJax_Size3;">(</span></span>
+                    </span>
+                    </span>
+                    </span>
+                    </span>
+                    </span><span class="mfrac" id="MathJax-Span-209"><span style="display: inline-block; position: relative; width: 0.604em; height: 0px;"><span style="position: absolute; clip: rect(3.428em, 1000.6em, 4.21em, -999.997em); top: -4.684em; left: 50%; margin-left: -0.297em;"><span class="mi" id="MathJax-Span-210" style="font-family: MathJax_Math-italic;">n</span>
+                    <span style="display: inline-block; width: 0px; height: 4.029em;"></span>
+                    </span><span style="position: absolute; clip: rect(3.128em, 1000.48em, 4.21em, -999.997em); top: -3.362em; left: 50%; margin-left: -0.237em;"><span class="mi" id="MathJax-Span-211" style="font-family: MathJax_Math-italic;">k</span>
+                    <span style="display: inline-block; width: 0px; height: 4.029em;"></span>
+                    </span>
+                    </span>
+                    </span><span class="TeXmathchoice" id="MathJax-Span-212"><span class="mstyle" id="MathJax-Span-213"><span class="mrow" id="MathJax-Span-214"><span class="texatom" id="MathJax-Span-215"><span class="mrow" id="MathJax-Span-216"><span class="mo" id="MathJax-Span-217" style="vertical-align: 0em;"><span style="font-family: MathJax_Size3;">)</span></span>
+                    </span>
+                    </span>
+                    </span>
+                    </span>
+                    </span>
+                    </span>
+                    </span>
+                    </span><span class="msubsup" id="MathJax-Span-218"><span style="display: inline-block; position: relative; width: 0.965em; height: 0px;"><span style="position: absolute; clip: rect(3.428em, 1000.48em, 4.39em, -999.997em); top: -4.023em; left: 0em;"><span class="mi" id="MathJax-Span-219" style="font-family: MathJax_Math-italic;">p</span>
+                    <span style="display: inline-block; width: 0px; height: 4.029em;"></span>
+                    </span><span style="position: absolute; top: -4.444em; left: 0.484em;"><span class="mi" id="MathJax-Span-220" style="font-size: 70.7%; font-family: MathJax_Math-italic;">k</span><span style="display: inline-block; width: 0px; height: 4.029em;"></span></span>
+                    </span>
+                    </span><span class="mo" id="MathJax-Span-221" style="font-family: MathJax_Main;">(</span><span class="mn" id="MathJax-Span-222" style="font-family: MathJax_Main;">1</span><span class="mo" id="MathJax-Span-223" style="font-family: MathJax_Main; padding-left: 0.243em;">−</span>
+                    <span class="mi" id="MathJax-Span-224" style="font-family: MathJax_Math-italic; padding-left: 0.243em;">p</span><span class="msubsup" id="MathJax-Span-225"><span style="display: inline-block; position: relative; width: 1.806em; height: 0px;"><span style="position: absolute; clip: rect(3.128em, 1000.3em, 4.45em, -999.997em); top: -4.023em; left: 0em;"><span class="mo" id="MathJax-Span-226" style="font-family: MathJax_Main;">)</span>
+                    <span style="display: inline-block; width: 0px; height: 4.029em;"></span>
+                    </span><span style="position: absolute; top: -4.444em; left: 0.364em;"><span class="texatom" id="MathJax-Span-227"><span class="mrow" id="MathJax-Span-228"><span class="mi" id="MathJax-Span-229" style="font-size: 70.7%; font-family: MathJax_Math-italic;">n</span>
+                    <span class="mo" id="MathJax-Span-230" style="font-size: 70.7%; font-family: MathJax_Main;">−</span><span class="mi" id="MathJax-Span-231" style="font-size: 70.7%; font-family: MathJax_Math-italic;">k</span></span>
+                    </span><span style="display: inline-block; width: 0px; height: 4.029em;"></span></span>
+                    </span>
+                    </span>
+                    </span><span style="display: inline-block; width: 0px; height: 3.428em;"></span></span>
+                    </span><span style="display: inline-block; overflow: hidden; vertical-align: -1.059em; border-left: 0px solid; width: 0px; height: 2.628em;"></span></span>
+                    </nobr>
+                    </span>
+                </div><br> -->
+                    <input type="radio" name="wzor" id="dwa" value="dwa" onchange="zapisz(this)"> lim x^2=1 <br>
+                    <!-- <div class="MathJax_Display" style="text-align: center;">
+                    <span class="MathJax" id="MathJax-Element-3-Frame" tabindex="0" style="text-align: center; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; 
+                    display=&quot;block&quot;><mi>x</mi><mo>=</mo><mrow class=&quot;MJX-TeXAtom-ORD&quot;>
+                     <mfrac><mrow><mo>&amp;#x2212;</mo><mi>b</mi><mo>&amp;#x00B1;</mo><msqrt><msup><mi>b</mi><mn>2</mn></msup><mo>&amp;#x2212;
+    
+                        </mo><mn>4</mn><mi>a</mi><mi>c</mi></msqrt></mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></mrow><mo>.</mo></math>" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-19" style="width: 9.954em; display: inline-block;"><span style="display: inline-block; position: relative; width: 9.651em; height: 0px; font-size: 103%;"><span style="position: absolute; clip: rect(0.306em, 1009.59em, 3.037em, -999.997em); top: -2.181em; left: 0em;"><span class="mrow" id="MathJax-Span-20"><span class="mi" id="MathJax-Span-21" style="font-family: MathJax_Math-italic;">x</span>
+                    <span class="mo" id="MathJax-Span-22" style="font-family: MathJax_Main; padding-left: 0.306em;">=</span><span class="texatom" id="MathJax-Span-23" style="padding-left: 0.306em;"><span class="mrow" id="MathJax-Span-24"><span class="mfrac" id="MathJax-Span-25"><span style="display: inline-block; position: relative; width: 7.163em; height: 0px; margin-right: 0.124em; margin-left: 0.124em;"><span style="position: absolute; clip: rect(2.855em, 1007.04em, 4.433em, -999.997em); top: -4.73em; left: 50%; margin-left: -3.516em;"><span class="mrow" id="MathJax-Span-26"><span class="mo" id="MathJax-Span-27" style="font-family: MathJax_Main;">−</span>
+                    <span class="mi" id="MathJax-Span-28" style="font-family: MathJax_Math-italic;">b</span><span class="mo" id="MathJax-Span-29" style="font-family: MathJax_Main; padding-left: 0.246em;">±</span><span class="msqrt" id="MathJax-Span-30"
+                        style="padding-left: 0.246em;"><span style="display: inline-block; position: relative; width: 4.615em; height: 0px;"><span style="position: absolute; clip: rect(3.037em, 1003.58em, 4.251em, -999.997em); top: -4.002em; left: 0.974em;"><span class="mrow" id="MathJax-Span-31"><span class="msubsup" id="MathJax-Span-32"><span style="display: inline-block; position: relative; width: 0.853em; height: 0px;"><span style="position: absolute; clip: rect(3.158em, 1000.43em, 4.19em, -999.997em); top: -4.002em; left: 0em;"><span class="mi" id="MathJax-Span-33" style="font-family: MathJax_Math-italic;">b</span>
+                    <span style="display: inline-block; width: 0px; height: 4.008em;"></span>
+                    </span><span style="position: absolute; top: -4.305em; left: 0.428em;"><span class="mn" id="MathJax-Span-34" style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span>
+                    </span>
+                    </span><span class="mo" id="MathJax-Span-35" style="font-family: MathJax_Main; padding-left: 0.246em;">−</span><span class="mn" id="MathJax-Span-36" style="font-family: MathJax_Main; padding-left: 0.246em;">4</span><span class="mi" id="MathJax-Span-37"
+                        style="font-family: MathJax_Math-italic;">a</span><span class="mi" id="MathJax-Span-38" style="font-family: MathJax_Math-italic;">c</span></span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span>
+                    <span style="position: absolute; clip: rect(3.583em, 1003.52em, 3.947em, -999.997em); top: -4.669em; left: 0.974em;"><span style="display: inline-block; position: relative; width: 3.522em; height: 0px;"><span style="position: absolute; font-family: MathJax_Main; top: -4.002em; left: -0.058em;">−<span style="display: inline-block; width: 0px; height: 4.008em;"></span></span>
+                    <span style="position: absolute; font-family: MathJax_Main; top: -4.002em; left: 2.855em;">−<span style="display: inline-block; width: 0px; height: 4.008em;"></span></span><span style="font-family: MathJax_Main; position: absolute; top: -4.002em; left: 0.428em;">−<span style="display: inline-block; width: 0px; height: 4.008em;"></span></span>
+                    <span style="font-family: MathJax_Main; position: absolute; top: -4.002em; left: 0.913em;">−<span style="display: inline-block; width: 0px; height: 4.008em;"></span></span><span style="font-family: MathJax_Main; position: absolute; top: -4.002em; left: 1.399em;">−<span style="display: inline-block; width: 0px; height: 4.008em;"></span></span>
+                    <span style="font-family: MathJax_Main; position: absolute; top: -4.002em; left: 1.884em;">−<span style="display: inline-block; width: 0px; height: 4.008em;"></span></span><span style="font-family: MathJax_Main; position: absolute; top: -4.002em; left: 2.43em;">−<span style="display: inline-block; width: 0px; height: 4.008em;"></span></span>
+                    </span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span><span style="position: absolute; clip: rect(2.976em, 1001.03em, 4.554em, -999.997em); top: -4.123em; left: 0em;"><span style="font-family: MathJax_Size1;">√</span>
+                    <span style="display: inline-block; width: 0px; height: 4.008em;"></span>
+                    </span>
+                    </span>
+                    </span>
+                    </span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span><span style="position: absolute; clip: rect(3.158em, 1001.03em, 4.19em, -999.997em); top: -3.334em; left: 50%; margin-left: -0.482em;"><span class="mrow" id="MathJax-Span-39"><span class="mn" id="MathJax-Span-40" style="font-family: MathJax_Main;">2</span>
+                    <span class="mi" id="MathJax-Span-41" style="font-family: MathJax_Math-italic;">a</span>
+                    </span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span><span style="position: absolute; clip: rect(0.853em, 1007.16em, 1.277em, -999.997em); top: -1.332em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 7.163em; height: 0px;"></span>
+                    <span style="display: inline-block; width: 0px; height: 1.095em;"></span>
+                    </span>
+                    </span>
+                    </span>
+                    </span>
+                    </span><span class="mo" id="MathJax-Span-42" style="font-family: MathJax_Main;">.</span></span><span style="display: inline-block; width: 0px; height: 2.187em;"></span></span>
+                    </span><span style="display: inline-block; overflow: hidden; vertical-align: -0.747em; border-left: 0px solid; width: 0px; height: 2.566em;"></span></span>
+                    </nobr><span class="MJX_Assistive_MathML MJX_Assistive_MathML_Block" role="presentation"></span></span>
+                </div><br> -->
+                    <input type="radio" name="wzor" id="trzy" value="trzy" onchange="zapisz(this)"> e^2=7 <br>
+                    <!-- <div class="MathJax_Display" style="text-align: center;"><span class="MathJax" id="MathJax-Element-7-Frame" tabindex="0" style="text-align: center;"><nobr><span class="math" id="MathJax-Span-232" style="width: 17.115em; display: inline-block;"><span style="display: inline-block; position: relative; width: 16.629em; height: 0px; font-size: 103%;"><span style="position: absolute; clip: rect(0.488em, 1016.63em, 5.282em, -999.997em); top: -2.181em; left: 0em;"><span class="mrow" id="MathJax-Span-233"><span class="mfrac" id="MathJax-Span-234"><span style="display: inline-block; position: relative; width: 7.224em; height: 0px; margin-right: 0.124em; margin-left: 0.124em;"><span style="position: absolute; clip: rect(3.158em, 1000.43em, 4.19em, -999.997em); top: -4.669em; left: 50%; margin-left: -0.24em;"><span class="mn" id="MathJax-Span-235" style="font-family: MathJax_Main;">1</span>
+                    <span style="display: inline-block; width: 0px; height: 4.008em;"></span>
+                    </span><span style="position: absolute; clip: rect(2.673em, 1007.1em, 4.433em, -999.997em); top: -2.849em; left: 50%; margin-left: -3.577em;"><span class="mrow" id="MathJax-Span-236"><span class="mo" id="MathJax-Span-237" style="font-family: MathJax_Main;">(</span>
+                    <span class="msqrt" id="MathJax-Span-238"><span style="display: inline-block; position: relative; width: 2.916em; height: 0px;"><span style="position: absolute; clip: rect(2.976em, 1001.95em, 4.372em, -999.997em); top: -4.002em; left: 0.974em;"><span class="mrow" id="MathJax-Span-239"><span class="mi" id="MathJax-Span-240" style="font-family: MathJax_Math-italic;">ϕ</span>
+                    <span class="msqrt" id="MathJax-Span-241"><span style="display: inline-block; position: relative; width: 1.338em; height: 0px;"><span style="position: absolute; clip: rect(3.158em, 1000.43em, 4.19em, -999.997em); top: -4.002em; left: 0.853em;"><span class="mrow" id="MathJax-Span-242"><span class="mn" id="MathJax-Span-243" style="font-family: MathJax_Main;">5</span></span>
+                    <span style="display: inline-block; width: 0px; height: 4.008em;"></span>
+                    </span><span style="position: absolute; clip: rect(3.522em, 1000.49em, 3.947em, -999.997em); top: -4.548em; left: 0.853em;"><span style="font-family: MathJax_Main;">–</span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span>
+                    <span style="position: absolute; clip: rect(3.037em, 1000.85em, 4.372em, -999.997em); top: -4.002em; left: 0em;"><span style="font-family: MathJax_Main;">√</span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span>
+                    </span>
+                    </span>
+                    </span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span><span style="position: absolute; clip: rect(3.583em, 1001.88em, 3.947em, -999.997em); top: -4.73em; left: 0.974em;"><span style="display: inline-block; position: relative; width: 1.884em; height: 0px;"><span style="position: absolute; font-family: MathJax_Main; top: -4.002em; left: -0.058em;">−<span style="display: inline-block; width: 0px; height: 4.008em;"></span></span>
+                    <span style="position: absolute; font-family: MathJax_Main; top: -4.002em; left: 1.156em;">−<span style="display: inline-block; width: 0px; height: 4.008em;"></span></span><span style="font-family: MathJax_Main; position: absolute; top: -4.002em; left: 0.367em;">−<span style="display: inline-block; width: 0px; height: 4.008em;"></span></span>
+                    <span style="font-family: MathJax_Main; position: absolute; top: -4.002em; left: 0.792em;">−<span style="display: inline-block; width: 0px; height: 4.008em;"></span></span>
+                    </span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span><span style="position: absolute; clip: rect(2.976em, 1001.03em, 4.554em, -999.997em); top: -4.123em; left: 0em;"><span style="font-family: MathJax_Size1;">√</span>
+                    <span style="display: inline-block; width: 0px; height: 4.008em;"></span>
+                    </span>
+                    </span>
+                    </span><span class="mo" id="MathJax-Span-244" style="font-family: MathJax_Main; padding-left: 0.246em;">−</span><span class="mi" id="MathJax-Span-245" style="font-family: MathJax_Math-italic; padding-left: 0.246em;">ϕ</span>
+                    <span class="mo" id="MathJax-Span-246" style="font-family: MathJax_Main;">)</span><span class="msubsup" id="MathJax-Span-247"><span style="display: inline-block; position: relative; width: 1.581em; height: 0px;"><span style="position: absolute; clip: rect(3.401em, 1000.43em, 4.19em, -999.997em); top: -4.002em; left: 0em;"><span class="mi" id="MathJax-Span-248" style="font-family: MathJax_Math-italic;">e</span>
+                    <span style="display: inline-block; width: 0px; height: 4.008em;"></span>
+                    </span><span style="position: absolute; top: -4.427em; left: 0.488em;"><span class="texatom" id="MathJax-Span-249"><span class="mrow" id="MathJax-Span-250"><span class="mfrac" id="MathJax-Span-251"><span style="display: inline-block; position: relative; width: 0.367em; height: 0px; margin-right: 0.124em; margin-left: 0.124em;"><span style="position: absolute; clip: rect(3.522em, 1000.25em, 4.19em, -999.997em); top: -4.366em; left: 50%; margin-left: -0.118em;"><span class="mn" id="MathJax-Span-252" style="font-size: 50%; font-family: MathJax_Main;">2</span>
+                    <span style="display: inline-block; width: 0px; height: 4.008em;"></span>
+                    </span><span style="position: absolute; clip: rect(3.522em, 1000.25em, 4.19em, -999.997em); top: -3.698em; left: 50%; margin-left: -0.118em;"><span class="mn" id="MathJax-Span-253" style="font-size: 50%; font-family: MathJax_Main;">5</span>
+                    <span style="display: inline-block; width: 0px; height: 4.008em;"></span>
+                    </span><span style="position: absolute; clip: rect(0.853em, 1000.37em, 1.277em, -999.997em); top: -1.211em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 0.367em; height: 0px;"></span>
+                    <span style="display: inline-block; width: 0px; height: 1.095em;"></span>
+                    </span>
+                    </span>
+                    </span><span class="mi" id="MathJax-Span-254" style="font-size: 70.7%; font-family: MathJax_Math-italic;">π<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span>
+                    </span>
+                    </span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span>
+                    </span>
+                    </span>
+                    </span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span><span style="position: absolute; clip: rect(0.853em, 1007.22em, 1.277em, -999.997em); top: -1.332em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 7.224em; height: 0px;"></span>
+                    <span style="display: inline-block; width: 0px; height: 1.095em;"></span>
+                    </span>
+                    </span>
+                    </span><span class="mo" id="MathJax-Span-255" style="font-family: MathJax_Main; padding-left: 0.306em;">=</span><span class="mn" id="MathJax-Span-256" style="font-family: MathJax_Main; padding-left: 0.306em;">1</span>
+                    <span class="mo" id="MathJax-Span-257" style="font-family: MathJax_Main; padding-left: 0.246em;">+</span><span class="mfrac" id="MathJax-Span-258" style="padding-left: 0.246em;"><span style="display: inline-block; position: relative; width: 5.768em; height: 0px; margin-right: 0.124em; margin-left: 0.124em;"><span style="position: absolute; clip: rect(2.976em, 1001.82em, 4.19em, -999.997em); top: -4.669em; left: 50%; margin-left: -0.907em;"><span class="msubsup" id="MathJax-Span-259"><span style="display: inline-block; position: relative; width: 1.823em; height: 0px;"><span style="position: absolute; clip: rect(3.401em, 1000.43em, 4.19em, -999.997em); top: -4.002em; left: 0em;"><span class="mi" id="MathJax-Span-260" style="font-family: MathJax_Math-italic;">e</span>
+                    <span style="display: inline-block; width: 0px; height: 4.008em;"></span>
+                    </span><span style="position: absolute; top: -4.366em; left: 0.488em;"><span class="texatom" id="MathJax-Span-261"><span class="mrow" id="MathJax-Span-262"><span class="mo" id="MathJax-Span-263" style="font-size: 70.7%; font-family: MathJax_Main;">−</span>
+                    <span class="mn" id="MathJax-Span-264" style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span class="mi" id="MathJax-Span-265" style="font-size: 70.7%; font-family: MathJax_Math-italic;">π<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span>
+                    </span>
+                    </span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span>
+                    </span>
+                    </span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span><span style="position: absolute; clip: rect(2.855em, 1005.65em, 6.132em, -999.997em); top: -3.031em; left: 50%; margin-left: -2.788em;"><span class="mrow" id="MathJax-Span-266"><span class="mn" id="MathJax-Span-267" style="font-family: MathJax_Main;">1</span>
+                    <span class="mo" id="MathJax-Span-268" style="font-family: MathJax_Main; padding-left: 0.246em;">+</span><span class="mfrac" id="MathJax-Span-269" style="padding-left: 0.246em;"><span style="display: inline-block; position: relative; width: 3.583em; height: 0px; margin-right: 0.124em; margin-left: 0.124em;"><span style="position: absolute; clip: rect(3.28em, 1001.34em, 4.19em, -999.997em); top: -4.427em; left: 50%; margin-left: -0.664em;"><span class="msubsup" id="MathJax-Span-270"><span style="display: inline-block; position: relative; width: 1.338em; height: 0px;"><span style="position: absolute; clip: rect(3.522em, 1000.31em, 4.19em, -999.997em); top: -4.002em; left: 0em;"><span class="mi" id="MathJax-Span-271" style="font-size: 70.7%; font-family: MathJax_Math-italic;">e</span>
+                    <span style="display: inline-block; width: 0px; height: 4.008em;"></span>
+                    </span><span style="position: absolute; top: -4.184em; left: 0.306em;"><span class="texatom" id="MathJax-Span-272"><span class="mrow" id="MathJax-Span-273"><span class="mo" id="MathJax-Span-274" style="font-size: 50%; font-family: MathJax_Main;">−</span>
+                    <span class="mn" id="MathJax-Span-275" style="font-size: 50%; font-family: MathJax_Main;">4</span><span class="mi" id="MathJax-Span-276" style="font-size: 50%; font-family: MathJax_Math-italic;">π<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span>
+                    </span>
+                    </span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span>
+                    </span>
+                    </span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span><span style="position: absolute; clip: rect(2.976em, 1003.46em, 5.404em, -999.997em); top: -3.274em; left: 50%; margin-left: -1.757em;"><span class="mrow" id="MathJax-Span-277"><span class="mn" id="MathJax-Span-278" style="font-size: 70.7%; font-family: MathJax_Main;">1</span>
+                    <span class="mo" id="MathJax-Span-279" style="font-size: 70.7%; font-family: MathJax_Main;">+</span><span class="mfrac" id="MathJax-Span-280"><span style="display: inline-block; position: relative; width: 2.37em; height: 0px; margin-right: 0.124em; margin-left: 0.124em;"><span style="position: absolute; clip: rect(3.34em, 1001.22em, 4.19em, -999.997em); top: -4.366em; left: 50%; margin-left: -0.604em;"><span class="msubsup" id="MathJax-Span-281"><span style="display: inline-block; position: relative; width: 1.217em; height: 0px;"><span style="position: absolute; clip: rect(3.583em, 1000.25em, 4.19em, -999.997em); top: -4.002em; left: 0em;"><span class="mi" id="MathJax-Span-282" style="font-size: 50%; font-family: MathJax_Math-italic;">e</span>
+                    <span style="display: inline-block; width: 0px; height: 4.008em;"></span>
+                    </span><span style="position: absolute; top: -4.123em; left: 0.246em;"><span class="texatom" id="MathJax-Span-283"><span class="mrow" id="MathJax-Span-284"><span class="mo" id="MathJax-Span-285" style="font-size: 50%; font-family: MathJax_Main;">−</span>
+                    <span class="mn" id="MathJax-Span-286" style="font-size: 50%; font-family: MathJax_Main;">6</span><span class="mi" id="MathJax-Span-287" style="font-size: 50%; font-family: MathJax_Math-italic;">π<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span>
+                    </span>
+                    </span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span>
+                    </span>
+                    </span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span><span style="position: absolute; clip: rect(3.037em, 1002.25em, 4.615em, -999.997em); top: -3.213em; left: 50%; margin-left: -1.089em;"><span class="mrow" id="MathJax-Span-288"><span class="mn" id="MathJax-Span-289" style="font-size: 50%; font-family: MathJax_Main;">1</span>
+                    <span class="mo" id="MathJax-Span-290" style="font-size: 50%; font-family: MathJax_Main;">+</span><span class="mfrac" id="MathJax-Span-291"><span style="display: inline-block; position: relative; width: 1.338em; height: 0px; margin-right: 0.124em; margin-left: 0.124em;"><span style="position: absolute; clip: rect(3.34em, 1001.22em, 4.19em, -999.997em); top: -4.305em; left: 50%; margin-left: -0.604em;"><span class="msubsup" id="MathJax-Span-292"><span style="display: inline-block; position: relative; width: 1.217em; height: 0px;"><span style="position: absolute; clip: rect(3.583em, 1000.25em, 4.19em, -999.997em); top: -4.002em; left: 0em;"><span class="mi" id="MathJax-Span-293" style="font-size: 50%; font-family: MathJax_Math-italic;">e</span>
+                    <span style="display: inline-block; width: 0px; height: 4.008em;"></span>
+                    </span><span style="position: absolute; top: -4.123em; left: 0.246em;"><span class="texatom" id="MathJax-Span-294"><span class="mrow" id="MathJax-Span-295"><span class="mo" id="MathJax-Span-296" style="font-size: 50%; font-family: MathJax_Main;">−</span>
+                    <span class="mn" id="MathJax-Span-297" style="font-size: 50%; font-family: MathJax_Main;">8</span><span class="mi" id="MathJax-Span-298" style="font-size: 50%; font-family: MathJax_Math-italic;">π<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span>
+                    </span>
+                    </span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span>
+                    </span>
+                    </span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span><span style="position: absolute; clip: rect(3.522em, 1001.22em, 4.251em, -999.997em); top: -3.638em; left: 50%; margin-left: -0.604em;"><span class="mrow" id="MathJax-Span-299"><span class="mn" id="MathJax-Span-300" style="font-size: 50%; font-family: MathJax_Main;">1</span>
+                    <span class="mo" id="MathJax-Span-301" style="font-size: 50%; font-family: MathJax_Main;">+</span><span class="mo" id="MathJax-Span-302" style="font-size: 50%; font-family: MathJax_Main;">…</span></span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span>
+                    <span style="position: absolute; clip: rect(0.853em, 1001.34em, 1.277em, -999.997em); top: -1.211em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 1.338em; height: 0px;"></span>
+                    <span style="display: inline-block; width: 0px; height: 1.095em;"></span>
+                    </span>
+                    </span>
+                    </span>
+                    </span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span><span style="position: absolute; clip: rect(0.853em, 1002.37em, 1.277em, -999.997em); top: -1.211em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 2.37em; height: 0px;"></span>
+                    <span style="display: inline-block; width: 0px; height: 1.095em;"></span>
+                    </span>
+                    </span>
+                    </span>
+                    </span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span><span style="position: absolute; clip: rect(0.853em, 1003.58em, 1.277em, -999.997em); top: -1.332em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 3.583em; height: 0px;"></span>
+                    <span style="display: inline-block; width: 0px; height: 1.095em;"></span>
+                    </span>
+                    </span>
+                    </span>
+                    </span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span><span style="position: absolute; clip: rect(0.853em, 1005.77em, 1.277em, -999.997em); top: -1.332em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 5.768em; height: 0px;"></span>
+                    <span style="display: inline-block; width: 0px; height: 1.095em;"></span>
+                    </span>
+                    </span>
+                    </span>
+                    </span><span style="display: inline-block; width: 0px; height: 2.187em;"></span></span>
+                    </span><span style="display: inline-block; overflow: hidden; vertical-align: -3.059em; border-left: 0px solid; width: 0px; height: 4.691em;"></span></span>
+                    </nobr>
+                    </span>
+                </div> -->
+                </form>
+
+
+
+            </div>
+
+            <div id="Wybor" class="tabcontent">
+                <h3>Wybór</h3>
+                <div class="autocomplete">
+                    <input id="myInput" type="text" name="wybor" placeholder="Kraj">
+                    <input type="submit" value="Wybierz" name="wyborClick" onclick="zapisz(this)">
+                </div>
+            </div>
+
+            <div id="KolorData" class="tabcontent">
+                <h3>Kolor i Data</h3>
+
+                Wybierz kolor: <input type="color" id="kolor" name="kolor" value="#e66465" onchange="zapisz(this)">
+                <br> Wybierz date: <input type="date" id="data" name="data" onchange="zapisz(this)">
+            </div>
+            <div id="zakoncz" class="button-zakoncz" style="display: none;">
+                <button onclick="zakoncz()">ZAKOŃCZ</button>
+            </div>
+        </main>
+        <footer>
+        </footer>
+
+    </body>
+</div>
+<script>
+    function zakoncz() {
+        const toSend = {
+            opcja: 0,
+            id: localStorage.getItem("ID"),
+            wzor: this.wzor,
+            wybor: this.wybor,
+            kolor: this.kolor,
+            data: this.data
+        }
+        const jsonString = JSON.stringify(toSend);
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "praca.php");
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.send(jsonString);
+    }
+
+    function zakonczWybor() {
+        const toSend = {
+            opcja: 2,
+            id: localStorage.getItem("ID"),
+            wybor: this.wybor
+        }
+        const jsonString = JSON.stringify(toSend);
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "praca.php");
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.send(jsonString);
+    }
+
+    function zakonczWzor() {
+        const toSend = {
+            opcja: 1,
+            id: localStorage.getItem("ID"),
+            wzor: this.wzor
+        }
+        const jsonString = JSON.stringify(toSend);
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "praca.php");
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.send(jsonString);
+    }
+
+    function zakonczKolor() {
+        const toSend = {
+            opcja: 3,
+            id: localStorage.getItem("ID"),
+            kolor: this.kolor
+        }
+        const jsonString = JSON.stringify(toSend);
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "praca.php");
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.send(jsonString);
+    }
+
+    function zakonczData() {
+        const toSend = {
+            opcja: 4,
+            id: localStorage.getItem("ID"),
+            data: this.data
+        }
+        const jsonString = JSON.stringify(toSend);
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "praca.php");
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.send(jsonString);
+    }
+
+    function loadData() {
+        if (!localStorage.getItem("ID")) {
+            window.location.href = "index.html";
+        }
+        try {
+            loadWzor();
+        } catch (error) {}
+        try {
+            loadWybor();
+        } catch (error) {}
+        try {
+            loadKolor();
+        } catch (error) {}
+        try {
+            loadDate();
+        } catch (error) {}
+    }
+
+    function loadWzor() {
+        const toSend = {
+            opcja: 5,
+            id: localStorage.getItem("ID")
+        }
+        const jsonString = JSON.stringify(toSend);
+        var req = new XMLHttpRequest();
+        req.open('POST', 'praca.php', false); /* Argument trzeci, wartość true, określa, że żądanie ma być asynchroniczne */
+        req.onreadystatechange = function(aEvt) {
+            if (req.readyState == 4) {
+                if (req.status == 200)
+                    myObj = JSON.parse(req.responseText);
+                if (myObj.dane == "a^2+b^2=c^2") {
+                    document.getElementById("jeden").checked = true;
+                } else if (myObj.dane == "lim x^2=1") {
+                    document.getElementById("dwa").checked = true;
+                } else if (myObj.dane == "e^2=7") {
+                    document.getElementById("trzy").checked = true;
+                } else
+                    console.log("Błąd podczas ładowania strony\n");
+            }
+        };
+        req.send(jsonString);
+    }
+
+    function loadWybor() {
+        const toSend = {
+            opcja: 6,
+            id: localStorage.getItem("ID")
+        }
+        const jsonString = JSON.stringify(toSend);
+        var req = new XMLHttpRequest();
+        req.open('POST', 'praca.php', false); /* Argument trzeci, wartość true, określa, że żądanie ma być asynchroniczne */
+        req.onreadystatechange = function(aEvt) {
+            if (req.readyState == 4) {
+                if (req.status == 200) {
+                    myObj = JSON.parse(req.responseText);
+                    if (myObj.dane !== undefined)
+                        document.getElementById("myInput").value = myObj.dane;
+                    else
+                        document.getElementById("myInput").value = "";
+                }
+            } else
+                console.log("Błąd podczas ładowania strony\n");
+
+        };
+        req.send(jsonString);
+    }
+
+
+    function loadKolor() {
+        const toSend = {
+            opcja: 7,
+            id: localStorage.getItem("ID")
+        }
+        const jsonString = JSON.stringify(toSend);
+        var req = new XMLHttpRequest();
+        req.open('POST', 'praca.php', false); /* Argument trzeci, wartość true, określa, że żądanie ma być asynchroniczne */
+        req.onreadystatechange = function(aEvt) {
+            if (req.readyState == 4) {
+                if (req.status == 200) {
+                    myObj = JSON.parse(req.responseText);
+                    document.getElementById("kolor").value = myObj.dane;
+                }
+            } else
+                console.log("Błąd podczas ładowania strony\n");
+        };
+        req.send(jsonString);
+    }
+
+    function loadDate() {
+        const toSend = {
+            opcja: 8,
+            id: localStorage.getItem("ID")
+        }
+        const jsonString = JSON.stringify(toSend);
+        var req = new XMLHttpRequest();
+        req.open('POST', 'praca.php', false); /* Argument trzeci, wartość true, określa, że żądanie ma być asynchroniczne */
+        req.onreadystatechange = function(aEvt) {
+            if (req.readyState == 4) {
+                if (req.status == 200) {
+                    myObj = JSON.parse(req.responseText);
+                    document.getElementById("data").value = myObj.dane;
+                }
+            } else
+                console.log("Błąd podczas ładowania strony\n");
+        };
+        req.send(jsonString);
+    }
+
+
+    function openTab(evt, TabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(TabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+    var kolor = "";
+    var data = "";
+    var wzor = "";
+    var wybor = "";
+
+    function zapisz(data) {
+        if (data.name == "kolor") {
+            this.kolor = data.value;
+            zakonczKolor();
+        } else if (data.name == "data") {
+            this.data = data.value;
+            zakonczData();
+        } else if (data.name == "wzor") {
+            if (data.value == "jeden") {
+                this.wzor = "a^2+b^2=c^2";
+            } else if (data.value == "dwa") {
+                this.wzor = "lim x^2=1";
+            } else if (data.value == "trzy") {
+                this.wzor = "e^2=7";
+            }
+            zakonczWzor();
+        } else if (data.name == "wyborClick") {
+            this.wybor = document.getElementById("myInput").value;
+            zakonczWybor();
+        }
+        if (this.wzor != "" && this.wybor != "" && this.data != "" && this.kolor != "") {
+            document.getElementById("zakoncz").style.display = "block";
+        } else {
+            document.getElementById("zakoncz").style.display = "none";
+        }
+
+    }
+
+    function autocomplete(inp, arr) {
+        var currentFocus;
+        inp.addEventListener("input", function(e) {
+            var a, b, i, val = this.value;
+            closeAllLists();
+            if (!val) {
+                return false;
+            }
+            currentFocus = -1;
+            a = document.createElement("DIV");
+            a.setAttribute("id", this.id + "autocomplete-list");
+            a.setAttribute("class", "autocomplete-items");
+            this.parentNode.appendChild(a);
+            for (i = 0; i < arr.length; i++) {
+                if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+                    b = document.createElement("DIV");
+                    b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+                    b.innerHTML += arr[i].substr(val.length);
+                    b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                    b.addEventListener("click", function(e) {
+                        inp.value = this.getElementsByTagName("input")[0].value;
+                        this.wybor = this.getElementsByTagName("input")[0].value;
+                        console.log("A: " + this.getElementsByTagName("input")[0].value);
+                        closeAllLists();
+                    });
+                    a.appendChild(b);
+                }
+            }
+        });
+
+        inp.addEventListener("keydown", function(e) {
+            var x = document.getElementById(this.id + "autocomplete-list");
+            if (x) x = x.getElementsByTagName("div");
+            if (e.keyCode == 40) {
+                currentFocus++;
+                addActive(x);
+            } else if (e.keyCode == 38) {
+                currentFocus--;
+                addActive(x);
+            } else if (e.keyCode == 13) {
+                e.preventDefault();
+                if (currentFocus > -1) {
+                    if (x) x[currentFocus].click();
+                }
+            }
+        });
+
+        function addActive(x) {
+            if (!x) return false;
+            removeActive(x);
+            if (currentFocus >= x.length) currentFocus = 0;
+            if (currentFocus < 0) currentFocus = (x.length - 1);
+            x[currentFocus].classList.add("autocomplete-active");
+        }
+
+        function removeActive(x) {
+            for (var i = 0; i < x.length; i++) {
+                x[i].classList.remove("autocomplete-active");
+            }
+        }
+
+        function closeAllLists(elmnt) {
+            var x = document.getElementsByClassName("autocomplete-items");
+            for (var i = 0; i < x.length; i++) {
+                if (elmnt != x[i] && elmnt != inp) {
+                    x[i].parentNode.removeChild(x[i]);
+                }
+            }
+        }
+        document.addEventListener("click", function(e) {
+            closeAllLists(e.target);
+        });
+    }
+
+    var countries = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Anguilla", "Antigua & Barbuda", "Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia", "Bosnia & Herzegovina", "Botswana", "Brazil", "British Virgin Islands", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Cayman Islands", "Central Arfrican Republic", "Chad", "Chile", "China", "Colombia", "Congo", "Cook Islands", "Costa Rica", "Cote D Ivoire", "Croatia", "Cuba", "Curacao", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Falkland Islands", "Faroe Islands", "Fiji", "Finland", "France", "French Polynesia", "French West Indies", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Gibraltar", "Greece", "Greenland", "Grenada", "Guam", "Guatemala", "Guernsey", "Guinea", "Guinea Bissau", "Guyana", "Haiti", "Honduras", "Hong Kong", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Isle of Man", "Israel", "Italy", "Jamaica", "Japan", "Jersey", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Kosovo", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macau", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Montserrat", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauro", "Nepal", "Netherlands", "Netherlands Antilles", "New Caledonia", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Korea", "Norway", "Oman", "Pakistan", "Palau", "Palestine", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Puerto Rico", "Qatar", "Reunion", "Romania", "Russia", "Rwanda", "Saint Pierre & Miquelon", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Korea", "South Sudan", "Spain", "Sri Lanka", "St Kitts & Nevis", "St Lucia", "St Vincent", "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Timor L'Este", "Togo", "Tonga", "Trinidad & Tobago", "Tunisia", "Turkey", "Turkmenistan", "Turks & Caicos", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States of America", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City", "Venezuela", "Vietnam", "Virgin Islands (US)", "Yemen", "Zambia", "Zimbabwe"];
+    autocomplete(document.getElementById("myInput"), countries);
+</script>
+
+</html>
